@@ -1,0 +1,35 @@
+greedy function()
+    open city name file
+    open city distance file
+
+    # create dictionary of cities and corresponding numbers
+    initialize dictionary
+    for city in city file:
+        increment counter
+        add (counter, city) to dictionary
+
+    # create list containing all distance to all cities
+    initialize distance list
+    for row in distance file:
+        for num in row:
+            append distance to list
+        append list to distance list
+
+    for list in distance list:
+        for distance in list:
+            choose the smallest distance
+            remove distance corresponding original city
+
+    for run in range(len(list))
+        for item in list[i]
+            increment j
+            if item is less than min and item not in final list
+                store minimum value
+                store value of j
+            if j is greater than len(list) - 1
+                append city number to final string
+                # remove distance corresponding to list[j][i]
+                update value of i
+                reset j = -1
+
+
