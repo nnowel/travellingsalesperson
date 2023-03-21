@@ -1,0 +1,20 @@
+1. Read in city names and distances from files.
+2. Start at a random city.
+3. While there are still unvisited cities:
+    a. Find the nearest unvisited city.
+    b. Add the distance to the total distance.
+    c. Mark the city as visited.
+    d. Update the current city to the nearest unvisited city.
+4. Add the distance from the last city visited back to the starting city.
+5. Return the tour and total distance.
+
+
+1. Read in city names and distances from files.
+2. Generate a random initial solution.
+3. While the stopping criterion is not met:
+    a. Choose two random cities in the solution.
+    b. Swap the cities in the solution.
+    c. If the new solution is better, accept it.
+    d. If the new solution is worse, accept it with some probability (determined by a temperature parameter).
+    e. Update the temperature parameter.
+4. Return the best solution found and its total distance.
