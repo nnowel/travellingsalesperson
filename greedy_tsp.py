@@ -27,26 +27,31 @@ def tsp_greedy(name_file, distance_file):
 
     # current_city = 0
 
-    for lst in range(len(distances_list) - 1):
+    for lst in range(len(distances_list) - 1):  # loop until you add the correct number of cities
         minimum = max(distances_list[row])  # initial minimum value
         for distance in distances_list[row]:
 
             # for next_city in range(len(distances_list[current_city])):
 
             column += 1
+
             # print(distance)
             # print(minimum)
             # print(row)
             # print(column)
             # print()
 
-            if 0 < distance <= minimum and column not in final_location_list:
+            if 0 < distance <= minimum and column not in final_location_list:  # ensures same city is not added twice
+                # store local min information
                 minimum = distance
                 location = column
+
                 # print(f"minimum: {minimum}")
                 # print(f"location: {location}")
                 # print()
+
             if column == len(distances_list[row]) - 1:
+                # once all distances have been looped through, the local min is now the absolute min
                 final_location_list.append(location)
                 final_distance_list.append(minimum)
                 row = location
@@ -55,18 +60,18 @@ def tsp_greedy(name_file, distance_file):
     # print(final_location_list)
     # print(final_distance_list)
 
-    final_city_list = []
-    for city in final_location_list:
-        final_city_list.append(city_dict[city])
-
-    print(final_city_list)
-
     distance_sum = 0
     for distance in final_distance_list:
         distance_sum += distance
 
     print(f"Total Distance: {distance_sum}")
 
+    final_city_list = []
+    for city in final_location_list:
+        final_city_list.append(city_dict[city])
 
-tsp_greedy("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_names.txt",
-           "/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_distances.txt")
+    return final_city_list
+
+
+print(tsp_greedy("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_names.txt",
+                 "/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_distances.txt"))

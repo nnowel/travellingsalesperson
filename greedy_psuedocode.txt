@@ -25,12 +25,16 @@ greedy function()
             if j is greater than len(list) - 1
                 append city number to final list
                 append distance to used distances
-                # remove distance corresponding to list[j][i]
                 update value of i
                 reset j = -1
 
     # total distance
     for item in distance list
         sum them
+
+    initialize final city list
+    for city number in final list:
+        find corresponding city name to city number in dictionary, add to final city list
+    return final city list
 
 
