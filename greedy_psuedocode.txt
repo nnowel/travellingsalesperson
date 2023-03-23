@@ -15,21 +15,22 @@ greedy function()
             append distance to list
         append list to distance list
 
-    for list in distance list:
-        for distance in list:
-            choose the smallest distance
-            remove distance corresponding original city
-
+    initialize i = 0
     for run in range(len(list))
         for item in list[i]
             increment j
-            if item is less than min and item not in final list
+            if item is less than min and greater than 0 and item not in used distances list
                 store minimum value
                 store value of j
             if j is greater than len(list) - 1
-                append city number to final string
+                append city number to final list
+                append distance to used distances
                 # remove distance corresponding to list[j][i]
                 update value of i
                 reset j = -1
+
+    # total distance
+    for item in distance list
+        sum them
 
 
