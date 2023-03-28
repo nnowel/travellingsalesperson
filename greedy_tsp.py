@@ -19,7 +19,6 @@ def tsp_greedy(name_file, distance_file):
             for str in range(len(lst)):
                 lst[str] = float(lst[str])
 
-    # i = rows, j = columns
     row = 0
     column = -1
     final_distance_list = []

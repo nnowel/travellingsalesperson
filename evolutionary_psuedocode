@@ -1,0 +1,18 @@
+mutation function()
+    open city name file
+    open city distance file
+
+    # create dictionary of cities and corresponding numbers
+    initialize dictionary
+    for city in city file:
+        increment counter
+        add (counter, city) to dictionary
+
+    # create list containing all distance to all cities
+    initialize distance list
+    for row in distance file:
+        for num in row:
+            append distance to list
+        append list to distance list
+
+    for 2000 generations
