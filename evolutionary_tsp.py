@@ -68,8 +68,6 @@ def tsp_mutation(name_file, distance_file):
             for str in range(len(lst)):
                 lst[str] = float(lst[str])
 
-    final_distance_list = []
-    final_location_list = [0]
     current_city_list = []
 
     # initial minimum

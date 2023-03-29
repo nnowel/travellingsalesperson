@@ -1,18 +1,69 @@
+distance between two cities function(city1, city2):
+    open name file
+    open distance file
+
+    create dictionary for city and corresponding number
+
+    create list containing lists of distances for each city
+
+    store location of both cities from dictionary
+
+    find distance between both cities using distances list
+
+    return distance
+
+distance calculator function(list of cities):
+    create dictionary containing numbered locations of current city list
+
+    for city location number in current city dict:
+        use distance between 2 cities function to determine distance between current city and next city in dict
+        append distance to list
+
+    sum the distances in distance list
+
+    return sum
+
 mutation function()
-    open city name file
-    open city distance file
+    create list of cities
 
-    # create dictionary of cities and corresponding numbers
-    initialize dictionary
-    for city in city file:
-        increment counter
-        add (counter, city) to dictionary
+    create list containing lists of all cities distances
 
-    # create list containing all distance to all cities
-    initialize distance list
-    for row in distance file:
-        for num in row:
-            append distance to list
-        append list to distance list
+    determine initial minimum distance
 
-    for 2000 generations
+    # initialize
+    add cities to current city list
+
+    # mutate
+    while there are less than 5 stagnation (best tours list is less than 5)
+        set improvement marker to false
+
+        for offspring in generation
+            randomly remove city
+            randomly add city at new location
+
+        # select
+        call distance calculator to see if new city list is less total distance, if it is
+            set improvement marker to true
+            store minimum
+            store current city list
+
+        if no improvement
+            append tour to best tour list
+            mutate 3 times
+
+    for tour in best tour list
+        find total distance from distance calculator
+        append distances to list
+
+    find minimum distance
+    initialize location counter
+    for distance in distance list
+        if distance list at current location = minimum distance
+            save location
+        increment location counter
+
+    distance = distance list at saved location
+    best tour = best tour list at saved location
+
+    return best tour
+
