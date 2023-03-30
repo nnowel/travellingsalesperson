@@ -1,0 +1,4 @@
+3/21: 2-4pm - created greedy algorithm pseudocode
+3/23: 2-5pm - successfully finished greedy algorithm
+3/28: 2-5pm - created working mutation pseudocode and function
+3/29: 8:30-10:30pm - created working backtracking pseudocode and function

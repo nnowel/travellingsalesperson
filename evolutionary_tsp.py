@@ -2,8 +2,8 @@ import random
 
 
 def distance_between_two_cities(city1, city2, name_file, distance_file):
-    name_file = open("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_names.txt")
-    distance_file = open("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_distances.txt")
+    name_file = open("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/seven_cities_names.txt")
+    distance_file = open("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/seven_cities_distances.txt")
 
     city_dict = {}
     city_counter = -1
@@ -129,6 +129,6 @@ def tsp_mutation(name_file, distance_file):
     return best_tour
 
 
-print(tsp_mutation("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_names.txt",
-                   "/Users/nathanielnowel/PycharmProjects/travellingsalesperson/thirty_cities_distances.txt"))
+print(tsp_mutation("/Users/nathanielnowel/PycharmProjects/travellingsalesperson/seven_cities_names.txt",
+                   "/Users/nathanielnowel/PycharmProjects/travellingsalesperson/seven_cities_distances.txt"))
 

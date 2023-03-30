@@ -1,0 +1,86 @@
+distance between two cities function(city1, city2):
+    open name file
+    open distance file
+
+    create dictionary for city and corresponding number
+
+    create list containing lists of distances for each city
+
+    store location of both cities from dictionary
+
+    find distance between both cities using distances list
+
+    return distance
+
+distance calculator function(list of cities):
+    create dictionary containing numbered locations of current city list
+
+    for city location number in current city dict:
+        use distance between 2 cities function to determine distance between current city and next city in dict
+        append distance to list
+
+    sum the distances in distance list
+
+    return sum
+
+def tsp_backtrack(name_file, distance_file):
+    """
+
+    :param name_file: Location of text file containing the names of cities
+    :param distance_file: Location of text file containing the distances between cities
+    :return: Optimal tour as a list of city names (the optimal tour as a list of integers
+        will be stored in the global variable best_tour)
+    """
+
+    global city_names
+    global city_distances
+    global best_tour
+
+    Open names file and read data into city_names
+    Open distances file and read data into city_distances
+
+    # Set up best_tour to be some valid tour (likely not the optimal one)
+    for city in city_names:
+        add city to best tour list
+
+    # Get a list containing all the cities other than 0 (call it nonzero_cities)
+    for city in city_names:
+        if not indexed at 0 add to nonzero city list
+
+    # Initial recursive call is as follows (forces the starting city to be 0):
+    tsp_recursion([0], nonzero_cities)
+
+    # After tsp_recursion finishes, the optimal tour is now stored in best_tour
+    # Use city_names to convert this to a list of city names and return it
+    for city in city dict
+        add corresponding city to final city list
+
+    return final city list
+
+
+def tsp_recursion(partial_tour, remaining_cities):
+    """
+
+    :param partial_tour: Partial TSP tour being built
+    :param remaining_cities: Cities yet to be visited
+    :return: None. (the optimal tour as a list of integers
+        will be stored in the global variable best_tour)
+    """
+
+    if remaining cities is empty
+        if total distance of partial tour is less than that of best_tour
+            update best_tour
+    else if partial_tour contains only one city
+        for each ordered pair (city1, city2)
+            if city1 < city2
+                make a copy of partial_tour and remaining cities
+                append city1 followed by city2 onto partial_tour_copy
+                update remaining_cities_copy accordingly
+                tsp_recursion(partial_tour_copy, remaining_cities_copy)
+    else
+        for each city in remaining city
+            make a copy of partial_tour and remaining cities
+            insert city at index -2 into partial_tour_copy (this ensures city2 from
+            >> the previous case remains at the end of the tour)
+            update remaining_cities_copy accordingly
+            tsp_recursion(partial_tour_copy, remaining_cities_copy)
